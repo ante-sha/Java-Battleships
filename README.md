@@ -1,6 +1,6 @@
 # Getting Started...
 
-## Download JDK from Oracle:
+## Download JDK (Java Development Kit) from Oracle:
 
 http://www.oracle.com/technetwork/java/javase/downloads/index.html
 
@@ -25,7 +25,7 @@ Java HotSpot(TM) 64-Bit Server VM 18.3 (build 10.0.1+10, mixed mode)
 javac 10.0.1
 ```
 
-## Test the JDK works:
+## Test that the JDK works:
 
 Create a file HelloWord.java:
 
@@ -36,7 +36,7 @@ total 8
 -rw-r--r--  1 widders  staff  119 Jul 12 14:40 HelloWorld.java
 ```
 
-```bash
+```java
 class HelloWorld
 {
     public static void main(String args[])
