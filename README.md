@@ -68,7 +68,7 @@ Run the compiled code without any file suffix (.java or .class):
 
 https://gradle.org/install/
 
-For Mac:
+For Mac (with Homebrew):
 ```bash
 > brew install gradle
 Updating Homebrew...
