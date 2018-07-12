@@ -63,3 +63,21 @@ Run the compiled code without any file suffix (.java or .class):
 ```bash
 > java HelloWorld
 ```
+
+## Install Gradle
+
+https://gradle.org/install/
+
+For Mac:
+```bash
+> brew install gradle
+Updating Homebrew...
+```
+
+Verify installation:
+```bash
+> gradle -v
+------------------------------------------------------------
+Gradle 4.8.1
+------------------------------------------------------------
+```
