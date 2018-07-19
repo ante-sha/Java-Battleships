@@ -81,3 +81,41 @@ Verify installation:
 Gradle 4.8.1
 ------------------------------------------------------------
 ```
+
+## Create a Project with Gradle
+
+```bash
+/Users/widders/JavaProject
+> mkdir GradleProject
+> cd GradleProject/
+> gradle init --type java-library
+```
+
+This will create directories and files within your new project.
+
+Delete the Library*.java files in src/main/java and src/test/java.
+And create a new main class inside src/main/java.
+Then open the grade config file and replace the content.
+```bash
+/Users/widders/JavaProject/GradleProject
+> vim build.gradle
+```
+Delete and replace with:
+```
+apply plugin: 'application'
+
+mainClassName = 'HelloWorld'
+
+repositories {
+        mavenCentral()
+}
+
+dependencies {
+        compile 'org.slf4j:slf4j-api:1.7.5'
+            testCompile 'junit:junit:4.11'
+}
+```
+```
+
+
+
