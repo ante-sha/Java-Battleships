@@ -115,7 +115,21 @@ dependencies {
             testCompile 'junit:junit:4.11'
 }
 ```
+
+Excecute build:
+```bash
+> gradle build
+
+BUILD SUCCESSFUL in 0s
+7 actionable tasks: 2 executed, 5 up-to-date
 ```
 
+Excecute run:
+```bash
+> gradle run
+
+> Task :run
+Hello World
+```
 
 
