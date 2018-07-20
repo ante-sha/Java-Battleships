@@ -107,12 +107,12 @@ apply plugin: 'application'
 mainClassName = 'HelloWorld'
 
 repositories {
-        mavenCentral()
+    mavenCentral()
 }
 
 dependencies {
-        compile 'org.slf4j:slf4j-api:1.7.5'
-            testCompile 'junit:junit:4.11'
+    compile 'org.slf4j:slf4j-api:1.7.5'
+    testCompile 'junit:junit:4.11'
 }
 ```
 
