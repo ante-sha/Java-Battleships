@@ -94,8 +94,8 @@ Gradle 4.8.1
 This will create directories and files within your new project.
 
 Delete the `Library*.java` files in `src/main/java` and `src/test/java`.
-And create a new main class inside `src/main/java` (for example a HelloWorld.java class).
-Then open the grade config file and replace the content.
+And create a new main class inside `src/main/java` (for example HelloWorld.java).
+Then open the gradle config file and replace the content.
 ```bash
 /Users/widders/JavaProject/GradleProject
 > vim build.gradle
