@@ -1,4 +1,4 @@
-package game;
+package board;
 
 import java.io.*;
 import java.util.*;
@@ -13,8 +13,6 @@ public class Grid {
     // Constructor
 
     public Grid() {
-        System.out.println(Arrays.toString(xAxis));
-        System.out.println(Arrays.toString(yAxis));
         createGrid();
     }
 
@@ -73,5 +71,25 @@ public class Grid {
 
     }
 
+    public String[] getxAxis() {
+        return xAxis;
+    }
+
+    public int[] getyAxis() {
+        return yAxis;
+    }
+
+    public HashMap<Integer, Square> getGrid() {
+        return grid;
+    }
+
+    @Override
+    public String toString() {
+        return "Grid{" +
+                "xAxis=" + Arrays.toString(xAxis) +
+                ", yAxis=" + Arrays.toString(yAxis) +
+                ", grid=" + grid +
+                '}';
+    }
 }
 
