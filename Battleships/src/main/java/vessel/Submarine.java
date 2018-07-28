@@ -1,6 +1,6 @@
-package fleet;
+package vessel;
 
-public class Submarine extends NavalFleetImpl{
+public class Submarine extends VesselImpl{
     // The Submarine
 
     public Submarine() {

@@ -1,6 +1,6 @@
-package fleet;
+package vessel;
 
-public class Carrier extends NavalFleetImpl{
+public class Carrier extends VesselImpl{
         // The Carrier
 
     public Carrier() {

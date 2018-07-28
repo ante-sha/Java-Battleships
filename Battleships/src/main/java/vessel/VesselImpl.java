@@ -1,12 +1,12 @@
-package fleet;
+package vessel;
 
 
-public abstract class NavalFleetImpl implements Vessel {
+public abstract class VesselImpl implements Vessel {
 
     private int size;
     private int damage;
 
-    public NavalFleetImpl(int size) {
+    public VesselImpl(int size) {
         this.size = size;
         this.damage = 0;
     }

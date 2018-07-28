@@ -1,5 +1,5 @@
 package game;
-import fleet.*;
+import vessel.*;
 import board.*;
 
 class Play
@@ -10,11 +10,11 @@ class Play
         Grid grid1 = new Grid ();
         grid1.drawGrid();
 
-        NavalFleetImpl  carrier = new Carrier();
-        NavalFleetImpl  battleship = new Battleship();
-        NavalFleetImpl  cruiser = new Cruiser();
-        NavalFleetImpl  submarine = new Submarine();
-        NavalFleetImpl  destroyer = new Destroyer();
+        VesselImpl  carrier = new Carrier();
+        VesselImpl  battleship = new Battleship();
+        VesselImpl  cruiser = new Cruiser();
+        VesselImpl  submarine = new Submarine();
+        VesselImpl  destroyer = new Destroyer();
 
 
 

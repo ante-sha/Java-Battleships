@@ -1,6 +1,6 @@
-package fleet;
+package vessel;
 
-public class Battleship extends NavalFleetImpl{
+public class Battleship extends VesselImpl{
     // The Battleship
 
     public Battleship() {

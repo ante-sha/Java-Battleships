@@ -1,4 +1,4 @@
-package fleet;
+package vessel;
 
 
 public interface Vessel {

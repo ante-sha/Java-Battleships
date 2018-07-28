@@ -1,6 +1,6 @@
-package fleet;
+package vessel;
 
-public class Destroyer extends NavalFleetImpl{
+public class Destroyer extends VesselImpl{
     // The Destroyer
 
     public Destroyer() {
