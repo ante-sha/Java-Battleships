@@ -12,11 +12,11 @@ public class TestBattleship
         Battleship battleship = new Battleship();
         assertThat(battleship, instanceOf(VesselImpl.class));
     }
-
+    @Test
     public void testBattleshipSize()
     {
         VesselImpl battleship = new Battleship();
-        int size = 5;
+        int size = 4;
         assertEquals(size, battleship.getSize());
     }
 }

@@ -28,7 +28,7 @@ public class TestVesselImpl {
     }*/
 
     @Test
-    public void testIsSunk()
+    public void testCarrierIsSunkAfterFiveStrike()
     {
         Carrier testvesselimpl = new Carrier();
 

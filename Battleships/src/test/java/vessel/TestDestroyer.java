@@ -13,10 +13,11 @@ public class TestDestroyer
         assertThat(destroyer, instanceOf(VesselImpl.class));
     }
 
-    public void testDestroyerSize()
+    @Test
+    public void testDestroyerSizeisOne()
     {
         VesselImpl destroyer = new Destroyer();
-        int size = 5;
+        int size = 1;
         assertEquals(size, destroyer.getSize());
     }
 }

@@ -14,6 +14,7 @@ public class TestCarrier
         assertThat(carrier, instanceOf(VesselImpl.class));
     }
 
+    @Test
     public void testCarrierSize()
     {
         VesselImpl carrier = new Carrier();

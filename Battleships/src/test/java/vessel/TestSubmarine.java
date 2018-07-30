@@ -14,10 +14,11 @@ public class TestSubmarine
         assertThat(submarine, instanceOf(VesselImpl.class));
     }
 
+    @Test
     public void testSubmarineSize()
     {
         VesselImpl submarine = new Submarine();
-        int size = 5;
+        int size = 2;
         assertEquals(size, submarine.getSize());
     }
 }
