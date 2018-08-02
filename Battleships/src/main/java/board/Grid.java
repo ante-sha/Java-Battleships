@@ -10,7 +10,7 @@ import java.util.*;
  * The x-axis of the grid contains letters A to J, the y-axis has
  * numbers 1 to 10.
  * <p>
- * <img src="./doc-files/Grid-1.png" alt="Empty gird">
+ * <img src="./doc-files/Grid-1.png" alt="Empty grid">
  * @author     Minja Malovic
  * @author     Ivan Uglik
  * @version    1.0 - 02.08.2018
