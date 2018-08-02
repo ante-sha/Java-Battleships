@@ -36,4 +36,12 @@ javadoc {
     options.addBooleanOption('html5', true)
     options.addBooleanOption('author', true)
     options.addBooleanOption('version', true)
+
+    doLast{
+        copy{
+            from "src/main/java/board/doc-files"
+                into "$project.buildDir/docs/javadoc/board/doc-files"
+                include "*.png"
+        }
+    }
 }
