@@ -63,7 +63,7 @@ public class Grid
             {
                 if (counter == 0)
                 {
-                    if (this.yAxis[row]<10)
+                    if (this.yAxis[row] < 10)
                     {
                         System.out.print(this.yAxis[row] + " | ");
                     }
@@ -107,7 +107,7 @@ public class Grid
      */
     public String[] getxAxis()
     {
-        return xAxis;
+        return this.xAxis;
     }
 
     /**
@@ -117,7 +117,7 @@ public class Grid
      */
     public int[] getyAxis()
     {
-        return yAxis;
+        return this.yAxis;
     }
 
     /**
@@ -127,16 +127,16 @@ public class Grid
      */
     public HashMap<Integer, Square> getGrid()
     {
-        return grid;
+        return this.grid;
     }
 
     @Override
     public String toString()
     {
         return "Grid{" +
-                "xAxis=" + Arrays.toString(xAxis) +
-                ", yAxis=" + Arrays.toString(yAxis) +
-                ", grid=" + grid +
-                '}';
+                "xAxis=" + Arrays.toString(this.xAxis) +
+                ", yAxis=" + Arrays.toString(this.yAxis) +
+                ", grid=" + this.grid +
+                "}";
     }
 }

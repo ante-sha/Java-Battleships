@@ -16,8 +16,8 @@ public class Square
 {
     private Boolean wasShot = false;
     private Boolean hasShip = false;
-    private String xPosition;
-    private int yPosition;
+    private final String xPosition;
+    private final int yPosition;
 
     /**
      * The constructor requires the coordinates as those are fixed once we've
@@ -35,7 +35,7 @@ public class Square
      * Changes the status if the square has been shot at.
      *
      * @param wasShot Set it to true if a player shot at it.
-     */ 
+     */
     public void setWasShot(Boolean wasShot)
     {
         this.wasShot = wasShot;
@@ -55,14 +55,14 @@ public class Square
      * Changes the status if the square is part of a vessel.
      *
      * @param hasShip Set it to true if a vessel was placed on this square.
-     */ 
+     */
     public void setHasShip(Boolean hasShip)
     {
         this.hasShip = hasShip;
     }
 
     /**
-     * Returns true if the square has a ship on it. 
+     * Returns true if the square has a ship on it.
      *
      * @return true or false
      */
@@ -74,6 +74,11 @@ public class Square
     @Override
     public String toString()
     {
-        return this.xPosition + this.yPosition;
+        return "Square{"
+             + "xPosition=" + this.xPosition
+             + ", yPosition=" + this.yPosition
+             + ", hasShip=" + this.hasShip
+             + ", wasShot=" + this.wasShot
+             + "}";
     }
 }
