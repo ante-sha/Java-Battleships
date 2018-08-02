@@ -34,5 +34,6 @@ javadoc {
     source = sourceSets.main.allJava
     classpath = configurations.compile
     options.addBooleanOption('html5', true)
+    options.addBooleanOption('author', true)
     options.addBooleanOption('version', true)
 }
