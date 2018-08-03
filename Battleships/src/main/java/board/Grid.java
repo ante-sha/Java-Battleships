@@ -1,3 +1,11 @@
+/**
+ * Copyright (c) 2018 Barrage d.o.o.
+ *
+ * The sole purpose of this code is to make Michael happy.
+ * For everyone else it's just about discovering other tools and technologies.
+ * Have fun and code!
+ */
+
 package board;
 
 import java.io.*;
@@ -5,12 +13,13 @@ import java.util.*;
 
 /**
  * This class creates a grid (10 x 10 squares) for the battleship game.
- * The grid contains a hundred squares and each square has its own unique number
- * between 1 to 100.
- * The x-axis of the grid contains letters A to J, the y-axis has
+ *
+ * <p>The grid contains a hundred squares and each square has its own unique number
+ * between 1 to 100. The x-axis of the grid contains letters A to J, the y-axis has
  * numbers 1 to 10.
  * <p>
  * <img src="./doc-files/Grid-1.png" alt="Empty grid">
+ *
  * @author     Minja Malovic
  * @author     Ivan Uglik
  * @version    1.0 - 02.08.2018
@@ -23,9 +32,10 @@ public class Grid
     private HashMap<Integer, Square> grid = new HashMap<>();
 
     /**
-     * The constructor creates an empty grid in form
-     * of a HashMap where the keys are unique numbers (1 to 100) and values
-     * are Square objects.
+     * When creating a new object the constructor creates an empty grid in form
+     * of a HashMap.
+     *
+     * <p>The keys are unique numbers (1 to 100) and values are Square objects.
      */
     public Grid()
     {
@@ -46,7 +56,11 @@ public class Grid
     }
 
     /**
-     * This method draws a simple grid for the command line using <code>System.out.print</code>.
+     * This method draws a grid on the command line (terminal).
+     *
+     * <p>We are using a simple <code>System.out.print</code>.
+     *
+     * <p>This method won't be needed when we move to a GUI.
      */
     public void drawGrid()
     {
