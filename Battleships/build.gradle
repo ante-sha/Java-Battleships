@@ -5,6 +5,9 @@ apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'com.adarshr.test-logger'
 
+// Version number.
+version "${version}"
+
 // Entry point.
 //
 mainClassName = 'game.Play'
