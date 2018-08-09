@@ -1,20 +1,36 @@
+// Plugins required for our project.
+//
 apply plugin: 'java'
 apply plugin: 'application'
 apply plugin: 'jacoco'
 apply plugin: 'com.adarshr.test-logger'
 
+// Entry point.
+//
 mainClassName = 'game.Play'
 
+// Enable System.in.
+//
+run {
+    standardInput = System.in
+}
+
+// External JAR file repository.
+//
 repositories {
     jcenter()
 }
 
+// Artifacts we need for our project.
+//
 dependencies {
     compile 'org.slf4j:slf4j-api:1.7.5'
     testCompile 'junit:junit:4.11'
     testCompile 'org.hamcrest:hamcrest-core:1.3'
 }
 
+// Enable a test formatting plugin.
+//
 buildscript {
     repositories {
         maven {
@@ -26,10 +42,14 @@ buildscript {
     }
 }
 
+// Specify a test format.
+//
 testlogger {
     theme 'standard'
 }
 
+// Configure javadoc.
+//
 javadoc {
     source = sourceSets.main.allJava
     classpath = configurations.compile
@@ -40,8 +60,8 @@ javadoc {
     doLast{
         copy{
             from "src/main/java/board/doc-files"
-                into "$project.buildDir/docs/javadoc/board/doc-files"
-                include "*.png"
+            into "$project.buildDir/docs/javadoc/board/doc-files"
+            include "*.png"
         }
     }
 }
