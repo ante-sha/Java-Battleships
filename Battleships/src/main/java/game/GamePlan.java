@@ -4,18 +4,21 @@ import java.util.Scanner;
 
 
 public class GamePlan {
+    private Player player1;
+    private Player player2;
+
     public GamePlan() {
     }
-
     public void playGame() {
-        Player player1 = new Player();
-        Player player2 = new Player();
-        enterName();
+        this.player1 = new Player();
+        this.player2 = new Player();
+        player1.setName(enterName(1));
+        System.out.println("Hello " + player1.getName());
     }
 
-    private void enterName() {
+    private String enterName(int playerNumber) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("Player 1, choose your name");
-        player1 = scanner.nextLine();
+        System.out.println("Player " + playerNumber + ", choose your name");
+        return scanner.nextLine();
     }
 }
