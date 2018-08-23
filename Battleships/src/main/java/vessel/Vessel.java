@@ -3,7 +3,8 @@ package vessel;
 
 public interface Vessel {
 
-    public boolean isSunk();
-    public int strike();
-
+    public Boolean isSunk();
+    public Boolean strike();
+    public void setShip();
+    public Boolean isSet();
 }

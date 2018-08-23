@@ -9,4 +9,3 @@ class Play
         game.playGame();
     }
 }
-

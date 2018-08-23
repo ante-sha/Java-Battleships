@@ -4,7 +4,7 @@ public class Submarine extends VesselImpl{
     // The Submarine
 
     public Submarine() {
-        super(2);
+        super(3);
     }
 
 
