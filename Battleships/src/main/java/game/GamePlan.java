@@ -154,10 +154,10 @@ public class GamePlan {
           data[0] = 1;
           return data;
         }
-        /*else if(boom(collection2, grid2, numShips, rand2, 2, data[1])){
+        else if(boom(collection2, grid2, numShips, rand2, 2, data[1])){
           data[0] = 2;
           return data;
-        }*/
+        }
       }
     }
 
