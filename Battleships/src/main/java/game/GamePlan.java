@@ -33,7 +33,7 @@ public class GamePlan {
         fleet.createFleet(collection1, numByShip);
         fleet.createFleet(collection2, numByShip);
 
-        // fleet.placeFleet(collection1, numByShip, grid1, player1.getMode());
+
         fleet.placeFleet(collection1, numByShip, grid1, player1.getMode());
         fleet.placeFleet(collection2, numByShip, grid2, player2.getMode());
 
@@ -154,10 +154,10 @@ public class GamePlan {
           data[0] = 1;
           return data;
         }
-        else if(boom(collection2, grid2, numShips, rand2, 2, data[1])){
+        /*else if(boom(collection2, grid2, numShips, rand2, 2, data[1])){
           data[0] = 2;
           return data;
-        }
+        }*/
       }
     }
 
@@ -180,14 +180,14 @@ public class GamePlan {
       if(random) {
         do{
           if(count >= 5 || player == 1 && data1.getBase()[0] == 0 || player == 2 && data2.getBase()[0] == 0){
-            /*if(sCounter < 30 && false){
+            if(sCounter < 30 && false){
               x = rand.nextInt(10) + 1;
               y = rand.nextInt(10) + 1;
-            } else{*/
+            } else {
             base = grid.calculateNextStep(sCounter);
             x = base[0];
             y = base[1];
-            // }
+            }
             if(player == 1){
               data1.restart();
             } else {
@@ -284,6 +284,27 @@ public class GamePlan {
                 }
               }
             }
+            if(grid.getGrid().get((x-1)*10+y).getWasShot()) {
+              if(grid.getGrid().get((x-1)*10+y).getHasShip()){
+                if(player == 1){
+                  data1.setLast(x,y);
+                } else {
+                  data2.setLast(x,y);
+                }
+                continue;
+              } else {
+                if(player == 1) {
+                  if(data1.dirChanged()) data1.restart();
+                  else data1.rotate();
+                }
+                else {
+                  if(data2.dirChanged()) data2.restart();
+                  else data2.rotate();
+                }
+                continue;
+              }
+            }
+
           }
 
           if(grid.getGrid().get((x - 1)*10+y).getWasShot()) {

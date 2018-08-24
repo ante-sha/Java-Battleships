@@ -339,15 +339,17 @@ public class Grid
             if(j == 9 || priority[i][j+1] == 0) nearByStruck++;
 
             if(nearByStruck == 4) priority[i][j] = 1;
-            else if(nearByStruck > 0){
-              if(nearByStruck == 3) priority[i][j] = Math.round(priority[i][j]/3);
-              else if(nearByStruck == 2) priority[i][j] = Math.round(priority[i][j]*2/3);
-              else if(nearByStruck == 1) priority[i][j] = Math.round(priority[i][j]*3/4);
-
-              if(priority[i][j] < 6/nearByStruck) priority[i][j] = 6/nearByStruck;
-            }
-            else if (nearByStruck == 0) {
-              if(priority[i][j] < 10) priority[i][j] = 10;
+            else if(nearByStruck == 3) {
+              priority[i][j] = Math.round(priority[i][j]/3);
+              if(priority[i][j] < 2) priority[i][j] += 2;
+            } else if(nearByStruck == 2) {
+                priority[i][j] = Math.round(priority[i][j]*2/3);
+                if(priority[i][j] < 3) priority[i][j] += 3;
+            } else if(nearByStruck == 1) {
+                priority[i][j] = Math.round(priority[i][j]*3/4);
+                if(priority[i][j] < 5) priority[i][j] += 5;
+            } else {
+                if(priority[i][j] < 10) priority[i][j] = 10;
             }
           }
 
@@ -369,7 +371,7 @@ public class Grid
         for(j=0;j<10;j++){
           System.out.print("\u001b[38;5;");
           if(priority[i][j] == 0) System.out.print("255");
-          else if(priority[i][j] == 1) System.out.print("216");
+          else if(priority[i][j] == 1) System.out.print("136");
           else if(priority[i][j] <= 10) System.out.print("45");
           else if(priority[i][j] <= 20) System.out.print("50");
           else if(priority[i][j] <= 30) System.out.print("52");
